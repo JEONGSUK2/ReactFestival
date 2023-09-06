@@ -5,22 +5,26 @@ import Detail from "./pages/Detail";
 import Aside from "./component/Aside";
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
-// import Example from "./pages/Example";
-// import Example2 from "./pages/Example2";
-// import Example3 from "./pages/Example3";
+import Example from "./pages/Example";
+import Example2 from "./pages/Example2";
+import Example3 from "./pages/Example3";
+import Example4 from "./pages/Example4";
+import Datapicker from "./pages/Datapicker";
 
 
 function App() {
   const light = {
     colors: {
       Primary : "orange",
-      Secondary : "orangered"
+      Secondary : "orangered",
+      BgColor : "#e9f1f6"
     }
   }
   const dark = {
     colors : {
       Primary : "#272929",
-      Secondary : "#e9e9e9"
+      Secondary : "#e9e9e9",
+      BgColor: "#333"
     }
   }
 
@@ -44,8 +48,13 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<Main/>}></Route> */}
         {/* /의 의미는 화면에 접속할때 먼저 보여줄 페이지 */}
-        <Route path="/" element={<Main />}></Route>
-        <Route path="/detail" element={<Detail/>}></Route>
+        <Route path="/" element={<Main/>}></Route>
+        <Route path="ex1" element={<Example/>}></Route>
+        <Route path="ex2" element={<Example2/>}></Route>
+        <Route path="ex3" element={<Example3/>}></Route>
+        <Route path="ex4" element={<Example4/>}></Route>
+        <Route path="datepicker" element={<Datapicker/>}></Route>
+        <Route path="/detail/:seq" element={<Detail/>}></Route>
       </Routes>
       </ThemeProvider>
     </>

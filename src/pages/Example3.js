@@ -20,11 +20,10 @@ const Count = styled.div`
   justify-content: space-between;
   
 `
-
-
 function Example3() {
     let [ data, setData] = useState(Example3_)
     let [animal, setAnimal] = useState("전체")
+    const [gender, setGender] = useState("전체")
 
     const dataFilter = data.filter(e=>{
       if(animal === "전체"){
